@@ -14,10 +14,10 @@ use App\Http\Controllers\TesteController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function () { #função view
     return view('welcome');
 });
+
+Route::view('login'); # método view
 Route::get('/teste', [TesteController::class, 'escreverString']);
 Route::get('/teste/{nome}', [TesteController::class, 'escreverString']);
-Route::get('/reteste', [TesteController::class, 'testarMetodoPrivado']);
-Route::get('/alerta', [TesteController::class, 'abrirAlerta']);
